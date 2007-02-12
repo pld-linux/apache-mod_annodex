@@ -1,6 +1,6 @@
 %define 	apxs		/usr/sbin/apxs
 Summary:	mod_annodex - full support for Annodex.net media for Apache
-Summary(pl):	mod_annodex - pe≥na obs≥uga mediÛw Annodex.net dla Apache'a
+Summary(pl.UTF-8):   mod_annodex - pe≈Çna obs≈Çuga medi√≥w Annodex.net dla Apache'a
 Name:		apache-mod_annodex
 Version:	0.2.2
 Release:	1
@@ -33,15 +33,15 @@ the following features:
  - dynamic retrieval of CMML summaries, if the Accept: header prefers
    type text/x-cmml over application/x-annodex.
 
-%description -l pl
-mod_annodex to modu≥ obs≥ugi dla typu application/x-annodex. Ma
-nastÍpuj±ce moøliwo∂ci:
- - dynamiczne generowanie mediÛw Annodex z plikÛw CMML
- - obs≥ugÍ czasowych offsetÛw zapytaÒ, takich jak
+%description -l pl.UTF-8
+mod_annodex to modu≈Ç obs≈Çugi dla typu application/x-annodex. Ma
+nastƒôpujƒÖce mo≈ºliwo≈õci:
+ - dynamiczne generowanie medi√≥w Annodex z plik√≥w CMML
+ - obs≈Çugƒô czasowych offset√≥w zapyta≈Ñ, takich jak
         http://media.example.com/fish.anx?t=npt:01:20.8
    albo
         http://media.example.com/fish.anx?id=Preparation
- - dynamiczne odtwarzanie podsumowaÒ CMML, je∂li nag≥Ûwek Accept:
+ - dynamiczne odtwarzanie podsumowa≈Ñ CMML, je≈õli nag≈Ç√≥wek Accept:
    preferuje typ text/x-cmml ponad application/x-annodex
 
 %prep
