@@ -1,6 +1,6 @@
 %define 	apxs		/usr/sbin/apxs
 Summary:	mod_annodex - full support for Annodex.net media for Apache
-Summary(pl.UTF-8):   mod_annodex - pełna obsługa mediów Annodex.net dla Apache'a
+Summary(pl.UTF-8):	mod_annodex - pełna obsługa mediów Annodex.net dla Apache'a
 Name:		apache-mod_annodex
 Version:	0.2.2
 Release:	1
