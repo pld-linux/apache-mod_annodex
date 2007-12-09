@@ -9,7 +9,7 @@ Group:		Networking/Daemons
 Source0:	http://www.annodex.net/software/mod_annodex/download/mod_annodex-ap20-%{version}.tar.gz
 # Source0-md5:	54d3fd4237d7789206797eb0c6de9af2
 URL:		http://www.annodex.net/software/mod_annodex/index.html
-BuildRequires:	apache-apxs >= 2.0
+BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0
 BuildRequires:	libannodex-devel
 BuildRequires:	libcmml-devel
