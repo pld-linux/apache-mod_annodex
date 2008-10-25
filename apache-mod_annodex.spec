@@ -5,7 +5,7 @@ Name:		apache-mod_annodex
 Version:	0.2.2
 Release:	1
 License:	Apache v1.1
-Group:		Networking/Daemons
+Group:		Networking/Daemons/HTTP
 Source0:	http://www.annodex.net/software/mod_annodex/download/mod_annodex-ap20-%{version}.tar.gz
 # Source0-md5:	54d3fd4237d7789206797eb0c6de9af2
 URL:		http://www.annodex.net/software/mod_annodex/index.html
