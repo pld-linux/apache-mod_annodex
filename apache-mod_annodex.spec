@@ -20,7 +20,7 @@ Requires:	apr >= 1:1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR 2>/dev/null)
-%define		_sysconfdir	%(%{apxs} -q SYSCONFDIR 2>/dev/null)
+%define		_sysconfdir	%(%{apxs} -q SYSCONFDIR 2>/dev/null)/conf.d
 
 %description
 mod_annodex is a handler for type application/x-annodex. It provides
@@ -60,11 +60,10 @@ rm -rf annodex
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_pkglibdir},%{_sysconfdir}/httpd.conf}
+install -d $RPM_BUILD_ROOT{%{_pkglibdir},%{_sysconfdir}}
 
-install .libs/mod_annodex.so $RPM_BUILD_ROOT%{_pkglibdir}
-
-cat annodex.load annodex.conf > $RPM_BUILD_ROOT%{_sysconfdir}/httpd.conf/90_mod_annodex.conf
+install -p .libs/mod_annodex.so $RPM_BUILD_ROOT%{_pkglibdir}
+cat annodex.load annodex.conf > $RPM_BUILD_ROOT%{_sysconfdir}/90_mod_annodex.conf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,5 +79,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README
-%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/httpd.conf/90_mod_annodex.conf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/90_mod_annodex.conf
 %attr(755,root,root) %{_pkglibdir}/mod_annodex.so
